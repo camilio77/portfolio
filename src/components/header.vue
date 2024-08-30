@@ -33,7 +33,7 @@
             </div>
             <div class="search">
                 <i class="bx bx-search"></i>
-                <input type="text" placeholder="portfolio" />
+                <h2>portfolio</h2>
             </div>
         </section>
         <section class="options2">
@@ -112,6 +112,7 @@ export default {
 .search {
     display: flex;
     align-items: center;
+    justify-content: center;
     background-color: #333333;
     padding: 0 5px;
     border-radius: 3px;
@@ -124,14 +125,13 @@ export default {
     margin-right: 5px;
 }
 
-.search input {
+.search h2 {
     background-color: #333333;
     border: none;
     color: #d4d4d4;
     outline: none;
     padding: 5px;
     font-size: 12px;
-    width: 100%;
 }
 
 .search input::placeholder {

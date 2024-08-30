@@ -4,7 +4,7 @@
             <ul class="up">
                 <li id="selected" class="icon"><i class='bx bx-file-blank'></i></li>
                 <li class="icon"><i class='bx bx-search'></i></li>
-                <li class="icon"><i class='bx bx-git-branch' ></i></li>
+                <li class="icon"><i class='bx bx-git-branch'></i></li>
                 <li class="icon"><i class='bx bxs-right-arrow'></i></li>
                 <li class="icon"><i class='bx bx-customize'></i></li>
             </ul>
@@ -18,15 +18,18 @@
             <div class="sidebar-header">
                 <h3>EXPLORER</h3>
             </div>
-            <div class="sidebar-name">
-                <h3><i class='bx bx-chevron-down' ></i>CAMILO-SERRANO</h3>
+            <div class="sidebar-name">  
+                <h3><i class='bx bx-chevron-down'></i>CAMILO-SERRANO</h3>
             </div>
             <ul class="file-list">
-                <li class="file-item folder" id="projects"><i class='bx bx-chevron-right' ></i><i class='bx bxs-folder' ></i>projects</li>
-                <li class="file-item folder" id="skills"><i class='bx bx-chevron-right' ></i><i class='bx bxs-folder' ></i>skills</li>
-                <li class="file-item folder" id="documents"><i class='bx bx-chevron-right' ></i><i class='bx bxs-folder' ></i>storage</li>
-                <li class="file-item md" id="about"><i class='bx bxs-file-md' ></i>ABOUT.md</li>
-                <li class="file-item json" id="languajes"><i class='bx bxs-file-json' ></i>languages.json</li>
+                <li class="file-item folder" id="projects"><i class='bx bx-chevron-right'></i><i
+                        class='bx bxs-folder'></i>projects</li>
+                <li class="file-item folder" id="skills"><i class='bx bx-chevron-right'></i><i
+                        class='bx bxs-folder'></i>skills</li>
+                <li class="file-item folder" id="documents"><i class='bx bx-chevron-right'></i><i
+                        class='bx bxs-folder'></i>storage</li>
+                <li class="file-item md" id="about"><i class='bx bxs-file-md'></i>ABOUT.md</li>
+                <li class="file-item json" id="languajes"><i class='bx bxs-file-json'></i>languages.json</li>
             </ul>
         </section>
 
@@ -34,35 +37,104 @@
         <section class="vsc-editor">
             <!-- Tabs -->
             <div class="tab-bar">
-                <div class="tab">main.js</div>
-                <div class="tab active">Header.vue</div>
-                <div class="tab">App.vue</div>
-                <div class="tab">style.css</div>
+                <div v-for="(tab, index) in tabs" :key="index" :class="['tab', { active: tab.active }]"
+                    @click="activateTab(index)">
+                    {{ tab.name }}
+                    <!-- Icon to close the tab -->
+                    <i class="bx bx-x" @click.stop="removeTab(index)"></i>
+                </div>
             </div>
             <!-- Editor Content -->
             <div class="editor-content">
-                <pre>
-            <code>
-  import { createApp } from 'vue'
-  import App from './App.vue'
-  import HeaderComponent from './components/header.vue'
-  import CustomCursor from './components/mouse.vue'
-  
-  createApp(App).mount('#app')
-  createApp(CustomCursor).mount('#cursor')
-  createApp(HeaderComponent).mount('#header')
-            </code>
-          </pre>
-            </div>
+      <pre><code>{{ activeTabContent }}</code></pre>
+        </div>
         </section>
-    </div>
+  </div>
 </template>
 
 <script>
-  export default {
-    name: 'MainComponent',
+export default {
+  name: 'MainComponent',
+  data() {
+    return {
+      tabs: [
+        { name: 'main.js', active: false, content: `
+import { createApp } from 'vue'
+import App from './App.vue'
+import HeaderComponent from './components/header.vue'
+import CustomCursor from './components/mouse.vue'
 
-  }
+createApp(App).mount('#app')
+createApp(CustomCursor).mount('#cursor')
+createApp(HeaderComponent).mount('#header')
+        `},
+        { name: 'Header.vue', active: true, content: `
+<template>
+  <header>
+    <!-- Header content -->
+  </header>
+</template>
+
+<script>
+export default {
+  name: 'HeaderComponent',
+  // Component logic
+}
+<script>
+        `},
+        { name: 'App.vue', active: false, content: `
+<template>
+  <div id="app">
+    <!-- App content -->
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'App',
+  // App component logic
+}
+<script>
+        `},
+        { name: 'style.css', active: false, content: `
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Add more styles as needed */
+        `},
+      ],
+    };
+  },
+  computed: {
+    activeTabContent() {
+      const activeTab = this.tabs.find(tab => tab.active);
+      return activeTab ? activeTab.content : '';
+    }
+  },
+  methods: {
+    removeTab(index) {
+      if (this.tabs.length > 1) {
+        this.tabs.splice(index, 1);
+        if (this.tabs[index] && this.tabs[index].active) {
+          this.activateTab(index);
+        } else if (index > 0) {
+          this.activateTab(index - 1);
+        } else {
+          this.activateTab(0);
+        }
+      }
+    },
+    activateTab(index) {
+      this.tabs.forEach((tab, i) => {
+        tab.active = i === index;
+      });
+    },
+  },
+};
 </script>
 
 <style scoped>
@@ -102,12 +174,16 @@
     color: #aaaaaa;
 }
 
+.icon:hover i {
+    color: #e2e1e1;
+}
+
 #selected {
     border-left: 3px solid #4063e0;
 }
 
 #selected i {
-    color: #d4d4d4;
+    color: #e2e1e1;
     font-weight: 500;
 }
 
@@ -132,7 +208,7 @@
     font-weight: 500;
 }
 
-.sidebar-name { 
+.sidebar-name {
     color: #d4d4d4;
     width: 100%;
     height: 4vh;
@@ -193,6 +269,18 @@
     padding: 8px 12px;
     cursor: pointer;
     color: #d4d4d4;
+    display: flex;
+    align-items: center;
+}
+
+.tab i {
+    opacity: 0;
+    margin-left: 1vh;
+}
+
+.tab i:hover {
+    background: #333333;
+    border-radius: 3px;
 }
 
 .tab.active {
@@ -203,6 +291,10 @@
 
 .tab:hover {
     background-color: #444444;
+}
+
+.tab:hover i {
+    opacity: 1;
 }
 
 .editor-content {
