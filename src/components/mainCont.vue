@@ -8,7 +8,7 @@
             </div>
             <i class='bx bxs-hand' @click="animateIcon"></i>
         </div>
-        <h3>Web <h2 class="blue" >Fullstack developer</h2>
+        <h3>Web <h2 class="blue" >Backend developer</h2>
         </h3>
         <p>It's a pleasure to meet you. Here, you'll find more about me. I'm currently learning new skills, but I'm
             always ready for new opportunities!</p>

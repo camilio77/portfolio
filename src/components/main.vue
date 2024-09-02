@@ -314,6 +314,10 @@ export default {
   margin-right: 1vh;
 }
 
+ul {
+  list-style: none;
+}
+
 .skill-item {
   padding-left: 4vh;
   width: 100%;
