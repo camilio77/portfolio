@@ -13,13 +13,27 @@ body {
 body {
     width: 100%;
     height: 100vh;
-    overflow-y: hidden;
+    box-sizing: border-box;
+    overflow-y: auto; /* Changed from hidden to auto */
     overflow-x: hidden;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 20fr 1fr;
+    grid-template-rows: auto 1fr auto; /* Changed to auto 1fr auto */
 }
 
-#cursor {
-    position: absolute !important;
+#header {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+#main {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    overflow-y: auto; /* Add this line */
+}
+#footer {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
 }
