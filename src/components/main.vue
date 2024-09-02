@@ -10,7 +10,17 @@
       </ul>
       <ul class="down">
         <li class="icon"><i class='bx bx-user-circle'></i></li>
-        <li class="icon"><i class='bx bx-cog'></i></li>
+        <li class="icon">
+          <i class='bx bx-cog' @click="openChangeTheme()"></i>
+          <div class="themes" v-if="showThemeMenu">
+            <h1><i class='bx bx-brush'></i> themes</h1>
+            <ul>
+              <li @click="changeTheme('light')"><i class='bx bx-chevron-right' style='color:#ffffff' ></i> Light</li>
+              <li @click="changeTheme('dark')"><i class='bx bx-chevron-right' style='color:#ffffff' ></i> Dark</li>
+              <li @click="changeTheme('system')"><i class='bx bx-chevron-right' style='color:#ffffff' ></i> System</li>
+            </ul>
+          </div>
+        </li>
       </ul>
     </aside>
     <!-- Sidebar -->
@@ -132,6 +142,7 @@ export default {
         skills: false,
         documents: false
       },
+      showThemeMenu: false,
     };
   },
   computed: {
@@ -141,6 +152,9 @@ export default {
     }
   },
   methods: {
+    openChangeTheme() {
+      this.showThemeMenu = !this.showThemeMenu;
+    },
     openFile(fileName, fileContent, iconClass) {
       const existingTab = this.tabs.find(tab => tab.name === fileName);
       if (existingTab) {
@@ -251,6 +265,43 @@ export default {
 #selected i {
   color: #e2e1e1;
   font-weight: 500;
+}
+
+.themes {
+  width: 25vh;
+  height: 30vh;
+  position: absolute;
+  background: #383838;
+  box-shadow: -1px 1px 9px 0px rgba(0,0,0,0.75);
+  border-radius: 4px;
+  left: 8vh;
+  bottom: 5vh;
+  padding: 1%;
+  box-sizing: border-box;
+}
+
+.themes h1 {
+  width: 100%;
+  border-bottom: 2px solid #838383;
+  margin-bottom: 1vh;
+}
+
+.themes ul {
+  list-style-type: none;
+}
+
+.themes li:hover {
+  background-color: #646464;
+  color: #ffffff;
+}
+
+.themes li {
+  color: #d4d4d4;
+  height: 3vh;
+  display: flex;
+  align-items: center;
+  padding-left: 2vh;
+  cursor: pointer;
 }
 
 .vsc-sidebar {
