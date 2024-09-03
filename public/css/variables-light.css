@@ -1,0 +1,48 @@
+:root {
+    --font-color: #333333; /* Dark gray text */
+    --icon-color: #666666; /* Medium gray for icons */
+    --icon-hover-color: #999999; /* Lighter gray for icon hover */
+    --border-color: #0094ff; /* Light blue border */
+    --border-color-shadow: #0094ff33; /* Semi-transparent light blue shadow */
+    --theme-background: #f5f5f5; /* Light gray background */
+    --theme-header-border: #cccccc; /* Light gray for header borders */
+    --theme-hover: #e0e0e0; /* Light gray for hover effects */
+    --sidebar-color: #ffffff; /* White for the sidebar */
+    --sidebar-border: #dddddd; /* Light gray for sidebar borders */
+    --file-item-hover: #f0f0f0; /* Slightly darker light gray for file item hover */
+    --editor-background: #ffffff; /* White for editor background */
+    --active-tab-border: #0094ff; /* Light blue for active tab borders */
+    --tab-hover: #e0e0e0; /* Light gray for tab hover effects */
+    --editor-content-background: #f5f5f5; /* Light gray for editor content background */
+    --gradient-color-start: #ffffff; /* White gradient start */
+    --gradient-color-end: #f0f0f0; /* Light gray gradient end */
+    --gradient-light-overlay: rgba(0, 0, 0, 0.05); /* Very subtle dark overlay */
+    --cinecampus-color: #288605; /* Keep as is */
+    --spotify-color: #f0cc2d; /* Keep as is */
+    --social-color: #2174c1; /* Keep as is */
+    --frontend-color: #bc642a; /* Keep as is */
+    --devtools-color: #b82828; /* Keep as is */
+    --cv-color: #9d1313; /* Keep as is */
+    --portfolio-color: #0b906a; /* Keep as is */
+    --md-color: #3a90b5; /* Keep as is */
+    --json-color: #b62a2a; /* Keep as is */
+    --icon-special-color: rgb(245, 233, 0); /* Keep as is */
+    --scrollbar-thumb-color: #0094ff; /* Light blue for scrollbar thumb */
+    --scrollbar-track-color: #ffffff; /* White for scrollbar track */
+    --border-light-opacity-color: rgba(0, 0, 0, 0.1); /* Slightly darker transparent border color */
+    --shadow-color-light: #cccccc; /* Light gray shadow */
+    --shadow-color-medium: #b0b0b0; /* Medium gray shadow */
+    --shadow-color-dark: #999999; /* Darker gray shadow */
+    --shadow-color-extra-dark: #777777; /* Extra dark gray shadow */
+    --shadow-color-medium-dark: #888888; /* Medium dark gray shadow */
+    --shadow-color-darker: #666666; /* Darker gray shadow */
+    --shadow-color-darkest: #444444; /* Darkest gray shadow */
+    --icon-special-color-alt: #007acc; /* Keep as is */
+    --placeholder-color: #999999; /* Light gray for placeholders */
+    --footer-background: #0094ff; /* Light blue for footer background */
+    --logo-background: #1e7a17; /* Keep as is */
+    --link-hover-background: #0094ff; /* Light blue for link hover */
+    --border-color-skills: #cccccc; /* Light gray for skills borders */
+    --special-background: #ffffff0e; /* Slightly transparent white for special backgrounds */
+    --languages-background: #ffffff11; /* Slightly transparent white for languages background */
+}

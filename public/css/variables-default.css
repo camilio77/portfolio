@@ -1,0 +1,64 @@
+:root {
+    --font-color: #d4d4d4;
+    --icon-color: #aaaaaa;
+    --icon-hover-color: #e2e1e1;
+    --border-color: #4063e0;
+    --border-color-shadow: #4063e034;
+    --theme-background: #383838;
+    --theme-header-border: #838383;
+    --theme-hover: #646464;
+    --sidebar-color: #252526;
+    --sidebar-border: #333333;
+    --file-item-hover: #373737;
+    --editor-background: #1e1e1e;
+    --active-tab-border: #4063e0;
+    --tab-hover: #444444;
+    --editor-content-background: #333333;
+    --gradient-color-start: #1d1d1d;
+    --gradient-color-end: #1d1d1d;
+    --gradient-light-overlay: rgba(255, 255, 255, 0.02);
+    --cinecampus-color: #288605;
+    --spotify-color: #f0cc2d;
+    --social-color: #2174c1;
+    --frontend-color: #bc642a;
+    --devtools-color: #b82828;
+    --cv-color: #9d1313;
+    --portfolio-color: #0b906a;
+    --md-color: #3a90b5;
+    --json-color: #b62a2a;
+    --icon-special-color: rgb(245, 233, 0);
+    /* New variable added */
+    --scrollbar-thumb-color: #1e53a2;
+    /* New variable added */
+    --scrollbar-track-color: #ffffff00;
+    /* New variable added */
+    --border-light-opacity-color: rgba(255, 255, 255, 0.2);
+    /* New variable added */
+    --shadow-color-light: #ffffff53;
+    /* New variable added */
+    --shadow-color-medium: #4f4f4f;
+    /* New variable added */
+    --shadow-color-dark: #3d3d3d;
+    /* New variable added */
+    --shadow-color-extra-dark: #240558;
+    /* New variable added */
+    --shadow-color-medium-dark: #545454;
+    /* New variable added */
+    --shadow-color-darker: #292929;
+    /* New variable added */
+    --shadow-color-darkest: #040404;
+    /* New variable added */
+    --icon-special-color-alt: #007acc;
+    /* New variable added */
+    --placeholder-color: #666666;
+    /* New variable added */
+    --footer-background: #2d6cca;
+    /* New variable added */
+    --logo-background: #1e7a17;
+    /* New variable added */
+    --link-hover-background: #1e53a2;
+    /* New variable added */
+    --border-color-skills: rgb(70, 70, 70);
+    --special-background: #ffffff0e;
+    --languages-background: #ffffff11;
+}

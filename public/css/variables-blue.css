@@ -1,0 +1,48 @@
+:root {
+    --font-color: #e0e0e0; /* Lighter gray text */
+    --icon-color: #b0b0b0; /* Slightly lighter gray for icons */
+    --icon-hover-color: #c0c0c0; /* Hover color for icons */
+    --border-color: #003f6c; /* Dark blue border */
+    --border-color-shadow: #003f6c54; /* Semi-transparent dark blue shadow */
+    --theme-background: #002f4d; /* Very dark blue background */
+    --theme-header-border: #004d7a; /* Darker blue for header borders */
+    --theme-hover: #00324e; /* Darker blue for hover effects */
+    --sidebar-color: #001f3f; /* Very dark blue for the sidebar */
+    --sidebar-border: #002f5d; /* Dark blue for sidebar borders */
+    --file-item-hover: #002b3e; /* Slightly lighter dark blue for file item hover */
+    --editor-background: #001b2e; /* Dark blue for editor background */
+    --active-tab-border: #003f6c; /* Dark blue for active tab borders */
+    --tab-hover: #002f5d; /* Dark blue for tab hover effects */
+    --editor-content-background: #002b3e; /* Dark blue for editor content background */
+    --gradient-color-start: #001b2e; /* Dark blue gradient start */
+    --gradient-color-end: #002b3e; /* Darker blue gradient end */
+    --gradient-light-overlay: rgba(0, 0, 0, 0.1); /* Very subtle dark overlay */
+    --cinecampus-color: #003f6c; /* Dark blue for CineCampus */
+    --spotify-color: #003f6c; /* Adjusted to match theme */
+    --social-color: #0051a0; /* Darker blue for social icons */
+    --frontend-color: #005a8d; /* Darker blue for frontend */
+    --devtools-color: #004d5b; /* Darker blue for devtools */
+    --cv-color: #003d60; /* Dark blue for CV section */
+    --portfolio-color: #004b71; /* Dark blue for portfolio section */
+    --md-color: #005b9e; /* Dark blue for markdown */
+    --json-color: #004953; /* Darker blue for JSON */
+    --icon-special-color: #005b9e; /* Adjusted to darker blue */
+    --scrollbar-thumb-color: #003f6c; /* Dark blue for scrollbar thumb */
+    --scrollbar-track-color: #001b2e00; /* Transparent dark blue for scrollbar track */
+    --border-light-opacity-color: rgba(0, 0, 0, 0.3); /* Slightly darker transparent border color */
+    --shadow-color-light: #003b5b; /* Dark blue shadow light */
+    --shadow-color-medium: #002c47; /* Medium dark blue shadow */
+    --shadow-color-dark: #001f3f; /* Dark blue shadow */
+    --shadow-color-extra-dark: #001233; /* Extra dark blue shadow */
+    --shadow-color-medium-dark: #002b4d; /* Medium dark blue shadow */
+    --shadow-color-darker: #001a32; /* Darker blue shadow */
+    --shadow-color-darkest: #000d1a; /* Darkest blue shadow */
+    --icon-special-color-alt: #004d7a; /* Darker blue for special icons */
+    --placeholder-color: #8a8a8a; /* Lighter gray for placeholders */
+    --footer-background: #002c47; /* Dark blue for footer background */
+    --logo-background: #003f6c; /* Dark blue for logo background */
+    --link-hover-background: #003f6c; /* Dark blue for link hover */
+    --border-color-skills: #003a5c; /* Dark blue for skills borders */
+    --special-background: #001b2e1a; /* Transparent dark blue for special backgrounds */
+    --languages-background: #001b2e1a; /* Transparent dark blue for languages background */
+}

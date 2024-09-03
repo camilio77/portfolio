@@ -15,9 +15,12 @@
           <div class="themes" v-if="showThemeMenu">
             <h1><i class='bx bx-brush'></i> themes</h1>
             <ul>
-              <li @click="changeTheme('light')"><i class='bx bx-chevron-right' style='color:#ffffff' ></i> Light</li>
-              <li @click="changeTheme('dark')"><i class='bx bx-chevron-right' style='color:#ffffff' ></i> Dark</li>
-              <li @click="changeTheme('system')"><i class='bx bx-chevron-right' style='color:#ffffff' ></i> System</li>
+              <li @click="changeTheme('light')"><i class='bx bx-chevron-right' style='color:#ffffff'></i> Light</li>
+              <li @click="changeTheme('default')"><i class='bx bx-chevron-right' style='color:#ffffff'></i> Default</li>
+              <li @click="changeTheme('blue')"><i class='bx bx-chevron-right' style='color:#ffffff'></i> Blue</li>
+              <li @click="changeTheme('red')"><i class='bx bx-chevron-right' style='color:#ffffff'></i> Red</li>
+              <li @click="changeTheme('purple')"><i class='bx bx-chevron-right' style='color:#ffffff'></i> Purple</li>
+              <li @click="changeTheme('other')"><i class='bx bx-chevron-right' style='color:#ffffff'></i> other</li>
             </ul>
           </div>
         </li>
@@ -60,6 +63,9 @@
           </li>
           <li class="skill-item" id="backend" @click="openFile('Backend.js', backendCont(), 'bx bxl-javascript')">
             <i class='bx bxl-javascript'></i>Backend.js
+          </li>
+          <li class="skill-item" id="devtools" @click="openFile('.DevTools', devToolsCont(), 'bx bxl-git')">
+            <i class='bx bxl-git'></i>.DevTools
           </li>
           <li class="skill-item" id="social" @click="openFile('SocialSkills.txt', socialCont(), 'bx bxs-file-txt')">
             <i class='bx bxs-file-txt'></i>SocialSkills.txt
@@ -115,6 +121,7 @@ import PortfolioContent from "./portfolio.vue";
 import CvContent from "./cv.vue";
 import AboutContent from "./about.vue";
 import LanguajesContent from "./languajes.vue";
+import DevToolsContent from "./devTools.vue";
 
 export default {
   name: 'MainComponent',
@@ -128,7 +135,8 @@ export default {
     PortfolioContent,
     CvContent,
     AboutContent,
-    LanguajesContent
+    LanguajesContent,
+    DevToolsContent
   },
   data() {
     return {
@@ -154,6 +162,13 @@ export default {
   methods: {
     openChangeTheme() {
       this.showThemeMenu = !this.showThemeMenu;
+    },
+    changeTheme(theme) {
+      const themeLink = document.getElementById('theme-style');
+      if (themeLink) {
+        themeLink.href = `./css/variables-${theme}.css`;
+      }
+      this.showThemeMenu = false;
     },
     openFile(fileName, fileContent, iconClass) {
       const existingTab = this.tabs.find(tab => tab.name === fileName);
@@ -211,6 +226,9 @@ export default {
     languajesCont() {
       return `LanguajesContent`;
     },
+    devToolsCont() {
+    return `DevToolsContent`; // Make sure this matches your component or content reference
+  },
   },
 };
 </script>
@@ -226,10 +244,8 @@ export default {
   height: 100%;
   width: 100%;
   box-sizing: border-box;
-  background-color: #1e1e1e;
-  /* Dark background like VS Code */
-  color: #d4d4d4;
-  /* Light text */
+  background-color: var(--editor-background);
+  color: var(--font-color);
 }
 
 .icons-apps {
@@ -251,19 +267,19 @@ export default {
 
 .icon i {
   font-size: 24px;
-  color: #aaaaaa;
+  color: var(--icon-color);
 }
 
 .icon:hover i {
-  color: #e2e1e1;
+  color: var(--icon-hover-color);
 }
 
 #selected {
-  border-left: 3px solid #4063e0;
+  border-left: 3px solid var(--border-color);
 }
 
 #selected i {
-  color: #e2e1e1;
+  color: var(--icon-hover-color);
   font-weight: 500;
 }
 
@@ -271,8 +287,8 @@ export default {
   width: 25vh;
   height: 30vh;
   position: absolute;
-  background: #383838;
-  box-shadow: -1px 1px 9px 0px rgba(0,0,0,0.75);
+  background: var(--theme-background);
+  box-shadow: -1px 1px 9px 0px rgba(0, 0, 0, 0.75);
   border-radius: 4px;
   left: 8vh;
   bottom: 5vh;
@@ -282,7 +298,7 @@ export default {
 
 .themes h1 {
   width: 100%;
-  border-bottom: 2px solid #838383;
+  border-bottom: 2px solid var(--theme-header-border);
   margin-bottom: 1vh;
 }
 
@@ -291,12 +307,12 @@ export default {
 }
 
 .themes li:hover {
-  background-color: #646464;
+  background-color: var(--theme-hover);
   color: #ffffff;
 }
 
 .themes li {
-  color: #d4d4d4;
+  color: var(--font-color);
   height: 3vh;
   display: flex;
   align-items: center;
@@ -306,14 +322,13 @@ export default {
 
 .vsc-sidebar {
   width: 15%;
-  background-color: #252526;
-  /* Sidebar color */
-  border-left: 1px solid #333333;
-  border-right: 1px solid #333333;
+  background-color: var(--sidebar-color);
+  border-left: 1px solid var(--sidebar-border);
+  border-right: 1px solid var(--sidebar-border);
 }
 
 .sidebar-header {
-  color: #d4d4d4;
+  color: var(--font-color);
   height: 5vh;
   display: flex;
   align-items: center;
@@ -326,7 +341,7 @@ export default {
 }
 
 .sidebar-name {
-  color: #d4d4d4;
+  color: var(--font-color);
   width: 100%;
   height: 4vh;
   display: flex;
@@ -376,46 +391,50 @@ ul {
 }
 
 .skill-item:hover {
-  background-color: #373737;
+  background-color: var(--file-item-hover);
 }
 
 #cinecampus i {
-  color: #288605;
+  color: var(--cinecampus-color);
 }
 
 #spotify i,
 #backend i {
-  color: #f0cc2d;
+  color: var(--spotify-color);
 }
 
 #social i {
-  color: #2174c1;
+  color: var(--social-color);
 }
 
 #frontend i {
-  color: #bc642a;
+  color: var(--frontend-color);
 }
 
 #cv i {
-  color: #9d1313;
+  color: var(--cv-color);
+}
+
+#devtools i {
+  color: var(--devtools-color);
 }
 
 #portfolio i {
-  color: #0b906a;
+  color: var(--portfolio-color);
 }
 
 .file-item.md i {
-  color: #3a90b5;
+  color: var(--md-color);
   margin-right: 1vh;
 }
 
 .file-item.json i {
-  color: #b62a2a;
+  color: var(--json-color);
   margin-right: 1vh;
 }
 
 .file-item:hover {
-  background-color: #373737;
+  background-color: var(--file-item-hover);
 }
 
 .vsc-editor {
@@ -430,14 +449,14 @@ ul {
 
 .tab-bar {
   display: flex;
-  background-color: #1e1e1e;
+  background-color: var(--editor-background);
   height: 6%;
 }
 
 .tab {
   padding: 8px 12px;
   cursor: pointer;
-  color: #d4d4d4;
+  color: var(--font-color);
   display: flex;
   align-items: center;
 }
@@ -452,17 +471,16 @@ ul {
 }
 
 .tab i:last-child:hover {
-  background: #333333;
+  background: var(--sidebar-border);
   border-radius: 3px;
 }
 
 .tab.active {
-  border-bottom: 2px solid #4063e0;
-  /* Active tab background */
+  border-bottom: 2px solid var(--active-tab-border);
 }
 
 .tab:hover {
-  background-color: #444444;
+  background-color: var(--tab-hover);
 }
 
 .tab:hover i {
@@ -472,64 +490,64 @@ ul {
 .editor-content {
   flex-grow: 1;
   padding: 20px;
-  background-color: #333333;
-  color: #d4d4d4;
-  overflow-y: auto; /* Enable scrolling within the editor content */
+  background-color: var(--editor-content-background);
+  color: var(--font-color);
+  overflow-y: auto;
   height: 94%;
-  box-sizing: border-box; /* Include padding in the element's total width and height */
+  box-sizing: border-box;
 }
 
 .editor-content {
-    background: -moz-linear-gradient(45deg, #1d1d1d 0%, #1d1d1d 29%, #1d1d1d 66%, #1d1d1d  100%);
-    background: -webkit-linear-gradient(45deg, #1d1d1d 0%,#1d1d1d 29%,#1d1d1d 66%,#1d1d1d 100%);
-    background: linear-gradient(45deg, #1d1d1d 0%,#1d1d1d 29%,#1d1d1d 66%,#1d1d1d 100%);
-    background-size: 400% 400%;
-    -webkit-animation: Gradient 15s ease infinite;
+  background: linear-gradient(45deg, var(--gradient-color-start) 0%, var(--gradient-color-start) 29%, var(--gradient-color-end) 66%, var(--gradient-color-end) 100%);
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 15s ease infinite;
   -moz-animation: Gradient 15s ease infinite;
   animation: Gradient 15s ease infinite;
-  /*min-height: calc(100vh - 2rem);*/
   display: flex;
   flex-direction: column;
   align-items: stretch;
   justify-content: space-evenly;
   overflow: hidden;
-  position: relative; 
+  position: relative;
 }
 
-.editor-content::before, 
+.editor-content::before,
 .editor-content::after {
   content: "";
   width: 70vmax;
   height: 70vmax;
   position: absolute;
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--gradient-light-overlay);
   left: -20vmin;
   top: -20vmin;
   animation: morph 15s linear infinite alternate, spin 20s linear infinite;
   z-index: 1;
   will-change: border-radius, transform;
   transform-origin: 55% 55%;
-  pointer-events: none; 
-}
-  
-.editor-content::after {
-    width: 70vmin;
-    height: 70vmin;
-    left: auto;
-    right: -10vmin;
-    top: auto;
-    bottom: 0;
-    animation: morph 10s linear infinite alternate, spin 26s linear infinite reverse;
-    transform-origin: 20% 20%; 
+  pointer-events: none;
 }
 
+.editor-content::after {
+  width: 70vmin;
+  height: 70vmin;
+  left: auto;
+  right: -10vmin;
+  top: auto;
+  bottom: 0;
+  animation: morph 10s linear infinite alternate, spin 26s linear infinite reverse;
+  transform-origin: 20% 20%;
+}
+
+/* Animation definitions */
 @-webkit-keyframes Gradient {
   0% {
     background-position: 0 50%
   }
+
   50% {
     background-position: 100% 50%
   }
+
   100% {
     background-position: 0 50%
   }
@@ -539,9 +557,11 @@ ul {
   0% {
     background-position: 0 50%
   }
+
   50% {
     background-position: 100% 50%
   }
+
   100% {
     background-position: 0 50%
   }
@@ -551,9 +571,11 @@ ul {
   0% {
     background-position: 0 50%
   }
+
   50% {
     background-position: 100% 50%
   }
+
   100% {
     background-position: 0 50%
   }
@@ -561,31 +583,84 @@ ul {
 
 @keyframes morph {
   0% {
-    border-radius: 40% 60% 60% 40% / 70% 30% 70% 30%; }
+    border-radius: 40% 60% 30% 70% / 30% 40% 60% 70%
+  }
+
   100% {
-    border-radius: 40% 60%; } 
+    border-radius: 70% 40% 60% 30% / 60% 50% 70% 30%
+  }
 }
 
 @keyframes spin {
-  to {
-    transform: rotate(1turn); 
-  } 
+  100% {
+    transform: rotate(360deg);
+  }
 }
-  .st0{display:none;}
-  .st1{display:inline;}
-  .st2{opacity:0.29;}
-  .st3{fill:#FFFFFF;}
-  .st4{clip-path:url(#SVGID_2_);fill:#FFFFFF;}
-  .st5{clip-path:url(#SVGID_4_);}
-  .st6{clip-path:url(#SVGID_6_);}
-  .st7{clip-path:url(#SVGID_8_);}
-  .st8{clip-path:url(#SVGID_10_);}
-  .st9{fill:none;}
-  .st10{clip-path:url(#SVGID_12_);}
-  .st11{opacity:0.7;}
-  .st12{clip-path:url(#SVGID_14_);}
-  .st13{opacity:0.2;}
-  .st14{clip-path:url(#SVGID_16_);}
-  .st15{opacity:0.3;fill:#FFFFFF;enable-background:new    ;}
 
+.st0 {
+  display: none;
+}
+
+.st1 {
+  display: inline;
+}
+
+.st2 {
+  opacity: 0.29;
+}
+
+.st3 {
+  fill: #FFFFFF;
+}
+
+.st4 {
+  clip-path: url(#SVGID_2_);
+  fill: #FFFFFF;
+}
+
+.st5 {
+  clip-path: url(#SVGID_4_);
+}
+
+.st6 {
+  clip-path: url(#SVGID_6_);
+}
+
+.st7 {
+  clip-path: url(#SVGID_8_);
+}
+
+.st8 {
+  clip-path: url(#SVGID_10_);
+}
+
+.st9 {
+  fill: none;
+}
+
+.st10 {
+  clip-path: url(#SVGID_12_);
+}
+
+.st11 {
+  opacity: 0.7;
+}
+
+.st12 {
+  clip-path: url(#SVGID_14_);
+}
+
+.st13 {
+  opacity: 0.2;
+}
+
+.st14 {
+  clip-path: url(#SVGID_16_);
+}
+
+.st15 {
+  opacity: 0.3;
+  fill: #FFFFFF;
+  enable-background: new;
+}
 </style>

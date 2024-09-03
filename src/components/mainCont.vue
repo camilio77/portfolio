@@ -109,18 +109,18 @@ export default {
 }
 
 .content h2 {
-    color: #fff;
+    color: var(--font-color); /* Replaced with variable */
     font-size: 10vh;
     position: absolute;
 }
 
 .content h2:nth-child(1) {
     color: transparent;
-    -webkit-text-stroke: 2px #03a9f4;
+    -webkit-text-stroke: 2px var(--border-color); /* Replaced with variable */
 }
 
 .content h2:nth-child(2) {
-    color: #03a9f4;
+    color: var(--border-color); /* Replaced with variable */
     animation: animate 4s ease-in-out infinite;
 }
 
@@ -154,7 +154,7 @@ export default {
 
 i {
     font-size: 10vh;
-    color: rgb(245, 233, 0);
+    color: var(--icon-special-color); /* Created a new variable */
     cursor: pointer;
     rotate: 10deg;
     transition: transform 0.3s;
@@ -174,7 +174,7 @@ h3 {
 .blue {
     margin-left: 1vh;
     font-size: 4vh;
-    border-bottom: 3px solid #03a9f4;
+    border-bottom: 3px solid var(--border-color); /* Replaced with variable */
 }
 
 p {
@@ -182,4 +182,5 @@ p {
     width: 70%;
     text-wrap: wrap;
 }
+
 </style>

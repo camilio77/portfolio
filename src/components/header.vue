@@ -60,14 +60,12 @@ export default {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: 1fr;
-    background-color: #1e1e1e;
-    /* VS Code dark header color */
-    color: #d4d4d4;
-    /* Light gray text color */
+    background-color: var(--editor-background); /* Replaced with variable */
+    color: var(--font-color); /* Replaced with variable */
     padding: 5px 10px;
     box-sizing: border-box;
     gap: 1%;
-    border-bottom: 1px solid #333333;
+    border-bottom: 1px solid var(--sidebar-border); /* Replaced with variable */
 }
 
 .options,
@@ -81,7 +79,7 @@ export default {
 
 .icon {
     margin-right: 15px;
-    color: #007acc;
+    color: var(--icon-special-color-alt); /* Replaced with variable */
     font-size: 25px;
 }
 
@@ -92,8 +90,7 @@ export default {
 }
 
 .option h2:hover {
-    color: #ffffff;
-    /* White color on hover */
+    color: #ffffff; /* White color on hover (No change needed) */
 }
 
 .searcher {
@@ -103,7 +100,7 @@ export default {
 }
 
 .arrows i {
-    color: #d4d4d4;
+    color: var(--font-color); /* Replaced with variable */
     font-size: 18px;
     margin-right: 10px;
     cursor: pointer;
@@ -113,29 +110,29 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #333333;
+    background-color: var(--sidebar-border); /* Replaced with variable */
     padding: 0 5px;
     border-radius: 3px;
     width: 80%;
 }
 
 .search i {
-    color: #d4d4d4;
+    color: var(--font-color); /* Replaced with variable */
     font-size: 14px;
     margin-right: 5px;
 }
 
 .search h2 {
-    background-color: #333333;
+    background-color: var(--sidebar-border); /* Replaced with variable */
     border: none;
-    color: #d4d4d4;
+    color: var(--font-color); /* Replaced with variable */
     outline: none;
     padding: 5px;
     font-size: 12px;
 }
 
 .search input::placeholder {
-    color: #666666;
+    color: var(--placeholder-color); /* Replaced with variable */
 }
 
 .options2 {
@@ -144,14 +141,14 @@ export default {
 }
 
 .options2 i {
-    color: #d4d4d4;
+    color: var(--font-color); /* Replaced with variable */
     font-size: 20px;
     margin: 0 8px;
     cursor: pointer;
 }
 
 .options2 i:hover {
-    color: #ffffff;
-    /* White color on hover */
+    color: #ffffff; /* White color on hover (No change needed) */
 }
+
 </style>

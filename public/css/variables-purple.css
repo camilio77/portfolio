@@ -1,0 +1,48 @@
+:root {
+    --font-color: #d4d4d4; /* Keep as is */
+    --icon-color: #c0a0d4; /* Light purple for icons */
+    --icon-hover-color: #a89dd4; /* Slightly darker light purple for icon hover */
+    --border-color: #a89dd4; /* Light purple for border */
+    --border-color-shadow: #a89dd433; /* Semi-transparent light purple shadow */
+    --theme-background: #3b3b5c; /* Darker purple-gray background */
+    --theme-header-border: #9e9acb; /* Lighter purple-gray for header border */
+    --theme-hover: #6a6a8c; /* Darker purple-gray for hover effects */
+    --sidebar-color: #2a2a4b; /* Darker purple-gray for sidebar */
+    --sidebar-border: #4b4b6e; /* Purple-gray for sidebar border */
+    --file-item-hover: #4a4a69; /* Darker purple-gray for file item hover */
+    --editor-background: #2c2c4d; /* Dark purple-gray for editor background */
+    --active-tab-border: #a89dd4; /* Light purple for active tab border */
+    --tab-hover: #5e5e78; /* Purple-gray for tab hover */
+    --editor-content-background: #4b4b6e; /* Purple-gray for editor content background */
+    --gradient-color-start: #2b2b4a; /* Darker purple-gray for gradient start */
+    --gradient-color-end: #2b2b4a; /* Darker purple-gray for gradient end */
+    --gradient-light-overlay: rgba(255, 255, 255, 0.02); /* Keep as is */
+    --cinecampus-color: #8c5fd4; /* Dark purple for CineCampus color */
+    --spotify-color: #8c5fd4; /* Keep as is */
+    --social-color: #8c5fd4; /* Light purple for social color */
+    --frontend-color: #8c5fd4; /* Light purple-red for frontend color */
+    --devtools-color: #8c5fd4; /* Keep as is */
+    --cv-color: #8c5fd4; /* Keep as is */
+    --portfolio-color: #8c5fd4; /* Keep as is */
+    --md-color: #a89dd4; /* Light purple for MD color */
+    --json-color: #a89dd4; /* Light purple for JSON color */
+    --icon-special-color: #a89dd4; /* Light purple for special icons */
+    --scrollbar-thumb-color: #8c5fd4; /* Light purple for scrollbar thumb */
+    --scrollbar-track-color: #ffffff00; /* Keep as is */
+    --border-light-opacity-color: rgba(255, 255, 255, 0.2); /* Keep as is */
+    --shadow-color-light: #b5b5d9; /* Light purple-gray shadow */
+    --shadow-color-medium: #6b6b8f; /* Medium purple-gray shadow */
+    --shadow-color-dark: #4d4d6d; /* Dark purple-gray shadow */
+    --shadow-color-extra-dark: #2b2b4a; /* Extra dark purple-gray shadow */
+    --shadow-color-medium-dark: #47476e; /* Medium-dark purple-gray shadow */
+    --shadow-color-darker: #3b3b5c; /* Darker purple-gray shadow */
+    --shadow-color-darkest: #1a1a2e; /* Darkest purple-gray shadow */
+    --icon-special-color-alt: #a89dd4; /* Light purple for special icons */
+    --placeholder-color: #8c5fd4; /* Light purple for placeholder color */
+    --footer-background: #6a5fa0; /* Light purple background for footer */
+    --logo-background: #8c5fd4; /* Keep as is */
+    --link-hover-background: #8c5fd4; /* Light purple for link hover */
+    --border-color-skills: #6b6b8f; /* Purple-gray for skills border */
+    --special-background: #ffffff0e; /* Keep as is */
+    --languages-background: #ffffff11; /* Keep as is */
+}

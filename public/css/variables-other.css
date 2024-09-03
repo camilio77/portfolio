@@ -1,0 +1,48 @@
+:root {
+    --font-color: #d4d4d4; /* Keep as is */
+    --icon-color: #d9534f; /* Red for icons */
+    --icon-hover-color: #c9302c; /* Darker red for icon hover */
+    --border-color: #d9534f; /* Red for border */
+    --border-color-shadow: #d9534f33; /* Semi-transparent red shadow */
+    --theme-background: #383838; /* Keep as is */
+    --theme-header-border: #838383; /* Keep as is */
+    --theme-hover: #646464; /* Keep as is */
+    --sidebar-color: #252526; /* Keep as is */
+    --sidebar-border: #333333; /* Keep as is */
+    --file-item-hover: #373737; /* Keep as is */
+    --editor-background: #1e1e1e; /* Keep as is */
+    --active-tab-border: #d9534f; /* Red for active tab border */
+    --tab-hover: #444444; /* Keep as is */
+    --editor-content-background: #333333; /* Keep as is */
+    --gradient-color-start: #1d1d1d; /* Keep as is */
+    --gradient-color-end: #1d1d1d; /* Keep as is */
+    --gradient-light-overlay: rgba(255, 255, 255, 0.02); /* Keep as is */
+    --cinecampus-color: #c9302c; /* Keep as is */
+    --spotify-color: #c9302c; /* Keep as is */
+    --social-color: #c9302c; /* Red for social color */
+    --frontend-color: #bc642a; /* Keep as is */
+    --devtools-color: #b82828; /* Keep as is */
+    --cv-color: #9d1313; /* Keep as is */
+    --portfolio-color: #c9302c; /* Keep as is */
+    --md-color: #d9534f; /* Red for MD color */
+    --json-color: #d9534f; /* Red for JSON color */
+    --icon-special-color: #d9534f; /* Red for special icons */
+    --scrollbar-thumb-color: #d9534f; /* Red for scrollbar thumb */
+    --scrollbar-track-color: #ffffff00; /* Keep as is */
+    --border-light-opacity-color: rgba(255, 255, 255, 0.2); /* Keep as is */
+    --shadow-color-light: #ffffff53; /* Keep as is */
+    --shadow-color-medium: #4f4f4f; /* Keep as is */
+    --shadow-color-dark: #3d3d3d; /* Keep as is */
+    --shadow-color-extra-dark: #240558; /* Keep as is */
+    --shadow-color-medium-dark: #545454; /* Keep as is */
+    --shadow-color-darker: #292929; /* Keep as is */
+    --shadow-color-darkest: #040404; /* Keep as is */
+    --icon-special-color-alt: #d9534f; /* Red for special icons */
+    --placeholder-color: #666666; /* Keep as is */
+    --footer-background: #d9534f; /* Red for footer background */
+    --logo-background: #040404; /* Keep as is */
+    --link-hover-background: #d9534f; /* Red for link hover */
+    --border-color-skills: rgb(70, 70, 70); /* Keep as is */
+    --special-background: #ffffff0e; /* Keep as is */
+    --languages-background: #ffffff11; /* Keep as is */
+}

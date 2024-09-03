@@ -1,0 +1,48 @@
+:root {
+    --font-color: #e2e2e2; /* Light gray text */
+    --icon-color: #b0b0b0; /* Slightly lighter gray for icons */
+    --icon-hover-color: #c8c8c8; /* Hover color for icons */
+    --border-color: #6d2c2c; /* Dark red border */
+    --border-color-shadow: #6d2c2c54; /* Semi-transparent dark red shadow */
+    --theme-background: #3b0e0e; /* Very dark red background */
+    --theme-header-border: #5c1f1f; /* Darker red for header borders */
+    --theme-hover: #4a0d0d; /* Darker red for hover effects */
+    --sidebar-color: #2d0b0b; /* Very dark red for the sidebar */
+    --sidebar-border: #3b0e0e; /* Dark red for sidebar borders */
+    --file-item-hover: #3a0c0c; /* Slightly lighter dark red for file item hover */
+    --editor-background: #2b0a0a; /* Dark red for editor background */
+    --active-tab-border: #6d2c2c; /* Dark red for active tab borders */
+    --tab-hover: #4a0d0d; /* Dark red for tab hover effects */
+    --editor-content-background: #3b0e0e; /* Dark red for editor content background */
+    --gradient-color-start: #2b0a0a; /* Dark red gradient start */
+    --gradient-color-end: #3a0c0c; /* Darker red gradient end */
+    --gradient-light-overlay: rgba(0, 0, 0, 0.1); /* Very subtle dark overlay */
+    --cinecampus-color: #6d2c2c; /* Dark red for CineCampus */
+    --spotify-color: #6d2c2c; /* Adjusted to match theme */
+    --social-color: #8e1a1a; /* Darker red for social icons */
+    --frontend-color: #8a1e1e; /* Darker red for frontend */
+    --devtools-color: #7a1d1d; /* Darker red for devtools */
+    --cv-color: #6b1e1e; /* Dark red for CV section */
+    --portfolio-color: #7b1c1c; /* Dark red for portfolio section */
+    --md-color: #8b2a2a; /* Dark red for markdown */
+    --json-color: #7a1a1a; /* Darker red for JSON */
+    --icon-special-color: #8b2a2a; /* Adjusted to darker red */
+    --scrollbar-thumb-color: #6d2c2c; /* Dark red for scrollbar thumb */
+    --scrollbar-track-color: #2b0a0a00; /* Transparent dark red for scrollbar track */
+    --border-light-opacity-color: rgba(0, 0, 0, 0.3); /* Slightly darker transparent border color */
+    --shadow-color-light: #5c1f1f; /* Dark red shadow light */
+    --shadow-color-medium: #4a0d0d; /* Medium dark red shadow */
+    --shadow-color-dark: #3b0e0e; /* Dark red shadow */
+    --shadow-color-extra-dark: #2b0a0a; /* Extra dark red shadow */
+    --shadow-color-medium-dark: #4a0d0d; /* Medium dark red shadow */
+    --shadow-color-darker: #2b0a0a; /* Darker red shadow */
+    --shadow-color-darkest: #1b0000; /* Darkest red shadow */
+    --icon-special-color-alt: #8e1a1a; /* Darker red for special icons */
+    --placeholder-color: #8a8a8a; /* Lighter gray for placeholders */
+    --footer-background: #4a0d0d; /* Dark red for footer background */
+    --logo-background: #6d2c2c; /* Dark red for logo background */
+    --link-hover-background: #6d2c2c; /* Dark red for link hover */
+    --border-color-skills: #5c1f1f; /* Dark red for skills borders */
+    --special-background: #2b0a0a1a; /* Transparent dark red for special backgrounds */
+    --languages-background: #2b0a0a1a; /* Transparent dark red for languages background */
+}

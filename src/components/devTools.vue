@@ -1,34 +1,52 @@
 <template>
     <div class="all">
-        <div class="content">
-            <h2>Frontend</h2>
-            <h2>Frontend</h2>
-            <h1>Frontend</h1>
-        </div>
-        <div class="frontend">
+      <div class="content">
+        <h2>Developer tools</h2>
+        <h2>Developer tools</h2>
+        <h1>Developer tools</h1>
+      </div>
+      <div class="devTools">
             <div class="skills">
                 <div class="skill">
-                    <img src="../assets/html5-without-wordmark-color-logo-14D252D878-seeklogo.com.png" alt="">
-                    <h3>HTML</h3>
+                    <img src="../assets/25231.png" alt="">
+                    <h3>GITHUB</h3>
                 </div>
             </div>
             <div class="skills">
                 <div class="skill">
-                    <img src="../assets/png-clipart-cascading-style-sheets-css3-javascript-logo-world-wide-web-blue-angle-thumbnail.png"
+                    <img src="../assets/Git-Icon-1788C.png"
                         alt="">
-                    <h3>CSS</h3>
+                    <h3>GIT</h3>
                 </div>
             </div>
             <div class="skills">
                 <div class="skill">
-                    <img src="../assets/JavaScript-logo.png" alt="">
-                    <h3>JS</h3>
+                    <img src="../assets/git-branch.svg" alt="">
+                    <h3>GIT BRANCH</h3>
                 </div>
             </div>
             <div class="skills">
                 <div class="skill">
-                    <img src="../assets/logo.png" alt="">
-                    <h3>VUE</h3>
+                    <img src="../assets/Figma-Logo-PNG-Picture.png" alt="">
+                    <h3>FIGMA</h3>
+                </div>
+            </div>
+            <div class="skills">
+                <div class="skill">
+                    <img src="../assets/Termius.png" alt="">
+                    <h3>TERMIUS</h3>
+                </div>
+            </div>
+            <div class="skills">
+                <div class="skill">
+                    <img src="../assets/Microsoft.VisualStudio.Services.Icons.png" alt="">
+                    <h3>CONVENTIONAL</h3>
+                </div>
+            </div>
+            <div class="skills">
+                <div class="skill">
+                    <img src="../assets/1681039084chatgpt-icon.webp" alt="">
+                    <h3>GPT</h3>
                 </div>
             </div>
         </div>
@@ -36,9 +54,9 @@
 </template>
 
 <script>
-export default {
-    name: 'FrontendContent'
-}
+    export default {
+        name: 'DevToolsContent'
+    }
 </script>
 
 <style>
@@ -108,7 +126,7 @@ export default {
     }
 }
 
-.frontend {
+.devTools {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -156,7 +174,7 @@ export default {
 }
 
 .skill h3 {
-    font-size: 6vh;
+    font-size: 4vh;
     height: min-content;
     color: var(--font-color);
 }
