@@ -21,8 +21,10 @@ const driverObj = driver({
       { element: '#skills', popover: {description: 'Here are my skills and habilities', side: "top", align: 'start' }},
       { element: '#documents', popover: {description: 'Here you will find some intresting documents like my CV', side: "right", align: 'start' }},
       { element: '#about', popover: {description: 'Here you will find more about me', side: "right", align: 'start' }},
-      { element: '#languages', popover: {description: 'Here you will find the languages that i spoke', side: "right", align: 'start' }},
+      { element: '#languages', popover: {description: 'Here you will find the languages that i speak', side: "right", align: 'start' }},
+      { element: '#certifications', popover: {description: 'Here you will find my certifications', side: "right", align: 'start' }},
       { element: '.tab-bar', popover: { title: 'Tabs', description: 'When you open new files there are going to be over here until you close them', side: "right", align: 'start' }},
+      { element: '#theme', popover: { title: 'Themes', description: 'Here you can customize the theme of the portfolio', side: "right", align: 'start'}},
       { popover: { title: 'Explore!!', description: 'And that is all, now you can check this webpage :)' } }
     ]
   });

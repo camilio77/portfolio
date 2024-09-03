@@ -10,7 +10,7 @@
       </ul>
       <ul class="down">
         <li class="icon"><i class='bx bx-user-circle'></i></li>
-        <li class="icon">
+        <li class="icon" id="theme">
           <i class='bx bx-cog' @click="openChangeTheme()"></i>
           <div class="themes" v-if="showThemeMenu">
             <h1><i class='bx bx-brush'></i> themes</h1>
@@ -87,7 +87,7 @@
         <li class="file-item json" id="languages"
           @click="openFile('languages.json', languajesCont(), 'bx bxs-file-json')"><i
             class='bx bxs-file-json'></i>languages.json</li>
-        <li class="file-item json" id="languages"
+        <li class="file-item json" id="certifications"
           @click="openFile('certifications-lock.json', certificationCont(), 'bx bxs-file-json')"><i
             class='bx bxs-file-json'></i>certifications-lock.json</li>
       </ul>
@@ -695,5 +695,9 @@ ul {
   opacity: 0.3;
   fill: #FFFFFF;
   enable-background: new;
+}
+
+#theme {
+  user-select: none;
 }
 </style>

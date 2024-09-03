@@ -164,3 +164,23 @@ export default {
     /* Ensure images are displayed as block elements */
 }
 </style>
+
+<style>
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--active-tab-border) !important; /* Force arrow color change */
+}
+
+.swiper-pagination-bullet {
+    background-color: var(--active-tab-border) !important; /* Force dot color change */
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    color: var(--active-tab-border) !important; /* Ensure hover color remains the same */
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--active-tab-border) !important; /* Force active dot color change */
+}
+</style>
