@@ -1,9 +1,9 @@
 <template>
     <div class="all">
         <div class="content">
-            <h2>CineCampus</h2>
-            <h2>CineCampus</h2>
-            <h1>CineCampus</h1>
+            <h2>Certifications</h2>
+            <h2>Certifications</h2>
+            <h1>Certifications</h1>
         </div>
         <div class="project">
             <!-- eslint-disable-next-line -->
@@ -11,21 +11,13 @@
                 :pagination="{ clickable: true }" :scrollbar="{ draggable: true }"
                 :autoplay="{ delay: 3000, disableOnInteraction: false }" @swiper="onSwiper" @slideChange="onSlideChange"
                 class="swiper-container">
-                <swiper-slide><img src="../assets/image.png" alt=""></swiper-slide>
-                <swiper-slide><img src="../assets/image2.png" alt=""></swiper-slide>
-                <swiper-slide><img src="../assets/image3.png" alt=""></swiper-slide>
-                <swiper-slide><img src="../assets/image4.png" alt=""></swiper-slide>
-                <swiper-slide><img src="../assets/image5.png" alt=""></swiper-slide>
-                <swiper-slide><img src="../assets/image6.png" alt=""></swiper-slide>
-                <swiper-slide><img src="../assets/image7.png" alt=""></swiper-slide>
+                <swiper-slide><img src="../assets/image17.png" alt=""></swiper-slide>
+                <swiper-slide><img src="../assets/image18.png" alt=""></swiper-slide>
+                <swiper-slide><img src="../assets/image19.png" alt=""></swiper-slide>
+                <swiper-slide><img src="../assets/image20.png" alt=""></swiper-slide>
+                <swiper-slide><img src="../assets/image21.png" alt=""></swiper-slide>
+                <swiper-slide><img src="../assets/image22.png" alt=""></swiper-slide>
             </swiper>
-            <div class="info">
-                <div class="technologies"><i class='bx bxl-nodejs'></i><i class='bx bxl-html5'></i><i
-                        class='bx bxl-css3'></i><i class='bx bxl-javascript'></i><i class='bx bxl-mongodb'></i><i
-                        class='bx bxl-stripe'></i></div>
-                <p>CineCampus was a project where I structured and created a MongoDB database with seven collections. I then developed a cinema API using Express, implementing all the necessary methods for the project to function correctly. After completing the backend, I designed and built the mobile frontend based on a cinema layout from Figma and integrated a payment system using the Stripe API.</p>
-                <button @click="goToGitHub">See in git-hub</button>
-            </div>
         </div>
     </div>
 </template>
@@ -43,7 +35,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 export default {
-    name: 'CineCampusContent',
+    name: 'CertificationContent',
     components: {
         Swiper,
         SwiperSlide,
@@ -61,10 +53,6 @@ export default {
             onSlideChange,
             modules: [Navigation, Pagination, Scrollbar, A11y, Autoplay], // Include Autoplay module
         };
-    }, methods: {
-        goToGitHub() {
-            window.location.href = 'https://github.com/camilio77/proyectoMongoII';
-        },
     }
 }
 </script>
@@ -119,7 +107,7 @@ export default {
 
 .project {
     width: 100%;
-    height: 50%;
+    height: 60%;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -129,7 +117,7 @@ export default {
 }
 
 .swiper-container {
-    width: 40%;
+    width: 100%;
     height: 100%;
     user-select: none;
 }
@@ -170,46 +158,9 @@ export default {
 .swiper-slide img {
     width: 80%;
     height: 90%;
-    object-fit: cover;
+    object-fit: contain;
     /* Adjust to contain or cover depending on your needs */
     display: block;
     /* Ensure images are displayed as block elements */
-}
-
-.info {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-
-.technologies {
-    width: 100%;
-    display: flex;
-    gap: 2vh;
-}
-
-.technologies i {
-    font-size: 5vh;
-    color: var(--font-color);
-}
-
-button {
-    width: 40%;
-    height: 6vh;
-    background-color: var(--languages-background);
-    border: 3px solid var(--border-color-skills);
-    border-radius: 10px;
-    color: var(--font-color);
-    font-weight: 600;
-    transition: .3s ease-in-out;
-}
-
-button:hover {
-    background-color: var(--languages-background-hover);
-    border-color: var(--active-tab-border);
-    cursor: pointer;
-    scale: 1.01;
 }
 </style>

@@ -37,3 +37,25 @@ body {
     height: 100%;
     box-sizing: border-box;
 }
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+    scrollbar-width: auto;
+    scrollbar-color: var(--scrollbar-thumb-color) var(--scrollbar-track-color); /* Replaced with variables */
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--scrollbar-track-color); /* Replaced with variable */
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb-color); /* Replaced with variable */
+    border-radius: 10px;
+    border: 3px none var(--scrollbar-track-color); /* Replaced with variable */
+}

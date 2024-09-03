@@ -5,22 +5,22 @@
                 <i class="bx bxl-visual-studio"></i>
             </div>
             <div class="option">
-                <h2>Archivo</h2>
+                <h2>File</h2>
             </div>
             <div class="option">
-                <h2>Editar</h2>
+                <h2>Edit</h2>
             </div>
             <div class="option">
-                <h2>Seleccion</h2>
+                <h2>Selection</h2>
             </div>
             <div class="option">
-                <h2>Ver</h2>
+                <h2>View</h2>
             </div>
             <div class="option">
-                <h2>Ir</h2>
+                <h2>Go</h2>
             </div>
             <div class="option">
-                <h2>Ejecutar</h2>
+                <h2>Run</h2>
             </div>
             <div class="option">
                 <h2>···</h2>

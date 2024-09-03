@@ -87,6 +87,9 @@
         <li class="file-item json" id="languages"
           @click="openFile('languages.json', languajesCont(), 'bx bxs-file-json')"><i
             class='bx bxs-file-json'></i>languages.json</li>
+        <li class="file-item json" id="languages"
+          @click="openFile('certifications-lock.json', certificationCont(), 'bx bxs-file-json')"><i
+            class='bx bxs-file-json'></i>certifications-lock.json</li>
       </ul>
     </section>
 
@@ -122,6 +125,7 @@ import CvContent from "./cv.vue";
 import AboutContent from "./about.vue";
 import LanguajesContent from "./languajes.vue";
 import DevToolsContent from "./devTools.vue";
+import CertificationContent from "./certificationCont.vue";
 
 export default {
   name: 'MainComponent',
@@ -136,7 +140,8 @@ export default {
     CvContent,
     AboutContent,
     LanguajesContent,
-    DevToolsContent
+    DevToolsContent,
+    CertificationContent
   },
   data() {
     return {
@@ -227,8 +232,11 @@ export default {
       return `LanguajesContent`;
     },
     devToolsCont() {
-    return `DevToolsContent`; // Make sure this matches your component or content reference
-  },
+      return `DevToolsContent`; // Make sure this matches your component or content reference
+    },
+    certificationCont() {
+      return `CertificationContent`; // Make sure this matches your component or content reference
+    }
   },
 };
 </script>
@@ -451,6 +459,31 @@ ul {
   display: flex;
   background-color: var(--editor-background);
   height: 6%;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+.tab-bar {
+    scrollbar-width: thin;
+    scrollbar-color: var(--file-item-hover) var(--scrollbar-track-color); /* Replaced with variables */
+}
+
+/* Chrome, Edge, and Safari */
+.tab-bar::-webkit-scrollbar {
+    width: 5px;
+}
+
+.tab-bar::-webkit-scrollbar-track {
+    background: var(--scrollbar-track-color); /* Replaced with variable */
+}
+
+.tab-bar::-webkit-scrollbar-thumb {
+    background-color: var(--file-item-hover); /* Replaced with variable */
+    border-radius: 10px;
+    border: 3px none var(--scrollbar-track-color); /* Replaced with variable */
 }
 
 .tab {
