@@ -51,6 +51,9 @@
           <li class="skill-item" id="portfolio" @click="openFile('Portfolio.vue', portfolioCont(), 'bx bxl-vuejs')">
             <i class='bx bxl-vuejs'></i> Portfolio.vue
           </li>
+          <li class="skill-item" id="e-commerce" @click="openFile('e-commerce.html', eCommerceCont(), 'bx bxl-html5')">
+            <i class='bx bxl-html5'></i> e-commerce.html
+          </li>
         </ul>
         <!-- Folder: Skills -->
         <li class="file-item folder" id="skills" @click="expandFolder('skills')">
@@ -90,6 +93,9 @@
         <li class="file-item json" id="certifications"
           @click="openFile('certifications-lock.json', certificationCont(), 'bx bxs-file-json')"><i
             class='bx bxs-file-json'></i>certifications-lock.json</li>
+            <li class="file-item json" id="certifications"
+          @click="openFile('communicate', communicateCont(), 'bx bxs-file-json')"><i
+            class='bx bxs-file-json'></i>communicate</li>
       </ul>
     </section>
 
@@ -126,6 +132,8 @@ import AboutContent from "./about.vue";
 import LanguajesContent from "./languajes.vue";
 import DevToolsContent from "./devTools.vue";
 import CertificationContent from "./certificationCont.vue";
+import ECommerceContent from "./e-commerce.vue";
+import SendContent from "./send.vue";
 
 export default {
   name: 'MainComponent',
@@ -141,7 +149,9 @@ export default {
     AboutContent,
     LanguajesContent,
     DevToolsContent,
-    CertificationContent
+    CertificationContent,
+    ECommerceContent,
+    SendContent,
   },
   data() {
     return {
@@ -236,7 +246,13 @@ export default {
     },
     certificationCont() {
       return `CertificationContent`; // Make sure this matches your component or content reference
-    }
+    },
+    eCommerceCont() {
+      return `ECommerceContent`; // Make sure this matches your component or content reference
+    },
+    communicateCont() {
+      return `SendContent`; // Make sure this matches your component or content reference
+    },
   },
 };
 </script>
@@ -421,6 +437,10 @@ ul {
 
 #cv i {
   color: var(--cv-color);
+}
+
+#e-commerce i {
+  color: var(--frontend-color);
 }
 
 #devtools i {
