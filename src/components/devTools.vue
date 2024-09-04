@@ -46,7 +46,25 @@
             <div class="skills">
                 <div class="skill">
                     <img src="../assets/1681039084chatgpt-icon.webp" alt="">
-                    <h3>GPT</h3>
+                    <h3>CHAT-GPT</h3>
+                </div>
+            </div>
+            <div class="skills">
+                <div class="skill">
+                    <img src="../assets/Logo-Claude-AI.png" alt="">
+                    <h3>CLAUDE</h3>
+                </div>
+            </div>
+            <div class="skills">
+                <div class="skill">
+                    <img src="../assets/excalidraw_232665.svg" alt="">
+                    <h3>EXCALIDRAW</h3>
+                </div>
+            </div>
+            <div class="skills">
+                <div class="skill">
+                    <img src="../assets/trello-logo-CE7B690E34-seeklogo.com.png" alt="">
+                    <h3>TRELLO</h3>
                 </div>
             </div>
         </div>
@@ -59,12 +77,11 @@
     }
 </script>
 
-<style>
+<style scoped>
 .all {
     width: 100%;
     height: 100%;
     box-sizing: border-box;
-    overflow-y: auto;
     gap: 2vh;
 }
 
@@ -128,6 +145,8 @@
 
 .devTools {
     width: 100%;
+    height: 76%;
+    overflow-y: auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;

@@ -41,7 +41,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .all {
     width: 100%;
     height: 100%;
