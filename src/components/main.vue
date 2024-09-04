@@ -93,9 +93,9 @@
         <li class="file-item json" id="certifications"
           @click="openFile('certifications-lock.json', certificationCont(), 'bx bxs-file-json')"><i
             class='bx bxs-file-json'></i>certifications-lock.json</li>
-            <li class="file-item json" id="certifications"
-          @click="openFile('communicate', communicateCont(), 'bx bxs-file-json')"><i
-            class='bx bxs-file-json'></i>communicate</li>
+            <li class="file-item json" id="communication"
+          @click="openFile('communicate.js', communicateCont(), 'bx bxl-nodejs')"><i
+            class='bx bxl-nodejs'></i>communicate.js</li>
       </ul>
     </section>
 
@@ -423,7 +423,8 @@ ul {
 }
 
 #spotify i,
-#backend i {
+#backend i,
+#communication i {
   color: var(--spotify-color);
 }
 
